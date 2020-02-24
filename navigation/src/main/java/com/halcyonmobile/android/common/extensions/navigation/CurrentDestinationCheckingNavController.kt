@@ -8,6 +8,14 @@ import androidx.navigation.NavDirections
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigator
 
+/**
+ * Wrapper around [NavController] stored in [underlyingNavController]
+ *
+ * Saves the currentDestinationId to [CurrentDestinationHoldingStore] on first navigation event.
+ * For every other navigation event it check's the currentDestinationId against the stored one.
+ *
+ * Note: the CurrentDestinationHoldingStore stored data stays even if new [CurrentDestinationCheckingNavController] is created for the same fragment.
+ */
 class CurrentDestinationCheckingNavController internal constructor(val underlyingNavController: NavController, private val currentDestinationHoldingStore: CurrentDestinationHoldingStore) {
 
     fun navigate(@IdRes resId: Int) = safeNavigate { underlyingNavController.navigate(resId) }
