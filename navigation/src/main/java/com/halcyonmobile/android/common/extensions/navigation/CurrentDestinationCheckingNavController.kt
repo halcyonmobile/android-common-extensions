@@ -16,7 +16,10 @@ import androidx.navigation.Navigator
  *
  * Note: the CurrentDestinationHoldingStore stored data stays even if new [CurrentDestinationCheckingNavController] is created for the same fragment.
  */
-class CurrentDestinationCheckingNavController internal constructor(val underlyingNavController: NavController, private val currentDestinationHoldingStore: CurrentDestinationHoldingStore) {
+class CurrentDestinationCheckingNavController internal constructor(
+    val underlyingNavController: NavController,
+    private val currentDestinationHoldingStore: CurrentDestinationHoldingStore
+) {
 
     fun navigate(@IdRes resId: Int) = safeNavigate { underlyingNavController.navigate(resId) }
 
@@ -24,7 +27,7 @@ class CurrentDestinationCheckingNavController internal constructor(val underlyin
 
     fun navigate(@IdRes resId: Int, args: Bundle?, navOptions: NavOptions?) = safeNavigate { underlyingNavController.navigate(resId, args, navOptions) }
 
-    fun navigate(@IdRes resId: Int, args: Bundle?, navOptions: NavOptions?, navigatorExtras : Navigator.Extras?) =
+    fun navigate(@IdRes resId: Int, args: Bundle?, navOptions: NavOptions?, navigatorExtras: Navigator.Extras?) =
         safeNavigate { underlyingNavController.navigate(resId, args, navOptions, navigatorExtras) }
 
     fun navigate(deepLink: Uri) = safeNavigate { underlyingNavController.navigate(deepLink) }
@@ -41,10 +44,12 @@ class CurrentDestinationCheckingNavController internal constructor(val underlyin
     fun navigate(directions: NavDirections, navigatorExtras: Navigator.Extras) = safeNavigate { underlyingNavController.navigate(directions, navigatorExtras) }
 
     private inline fun safeNavigate(crossinline navigate: () -> Unit) {
-        if (currentDestinationHoldingStore.savedCurrentDestinationId == null) {
-            currentDestinationHoldingStore.savedCurrentDestinationId = underlyingNavController.currentDestination?.id
-        }
-        if (currentDestinationHoldingStore.savedCurrentDestinationId == underlyingNavController.currentDestination?.id) {
+        val savedCurrentDestinationId = currentDestinationHoldingStore.savedCurrentDestinationId
+        val currentDestinationId = underlyingNavController.currentDestination?.id
+        if (savedCurrentDestinationId == null) {
+            currentDestinationHoldingStore.savedCurrentDestinationId = currentDestinationId
+            navigate()
+        } else if (savedCurrentDestinationId == currentDestinationId) {
             navigate()
         }
     }
