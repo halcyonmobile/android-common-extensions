@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/navigationOriginFragment">
+
+    <fragment
+        android:id="@+id/navigationOriginFragment"
+        android:name="com.halcyonmobile.android.common.extensions.navigation.fragments.NavigationOriginFragment"
+        android:label="NavigationOriginFragment">
+        <action
+            android:id="@+id/origin_to_destination"
+            app:destination="@id/navigationDestinationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationDestinationFragment"
+        android:name="com.halcyonmobile.android.common.extensions.navigation.fragments.NavigationDestinationFragment"
+        android:label="NavigationDestinationFragment">
+        <action
+            android:id="@+id/destination_to_wrong_destination"
+            app:destination="@id/navigationWrongDestinationFragment" />
+
+        <deepLink app:uri="https://navigation-test/" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationWrongDestinationFragment"
+        android:name="com.halcyonmobile.android.common.extensions.navigation.fragments.NavigationWrongDestinationFragment"
+        android:label="NavigationDestinationFragment"/>
+</navigation>

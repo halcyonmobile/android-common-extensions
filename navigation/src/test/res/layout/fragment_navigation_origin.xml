@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/to_invalid_destination"
+        android:text="to_invalid_destination"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <TextView
+        android:id="@+id/to_destination_with_res_id"
+        android:text="to_destination_with_res_id"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <TextView
+        android:id="@+id/to_destination_with_res_id_and_bundle"
+        android:text="to_destination_with_res_id_and_bundle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <TextView
+        android:id="@+id/to_destination_with_res_id_and_bundle_and_nav_options"
+        android:text="to_destination_with_res_id_and_bundle_and_nav_options"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <TextView
+        android:id="@+id/to_destination_with_res_id_and_bundle_and_nav_options_and_extras"
+        android:text="to_destination_with_res_id_and_bundle_and_nav_options_and_extras"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <TextView
+        android:id="@+id/to_destination_with_uri"
+        android:text="to_destination_with_uri"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <TextView
+        android:id="@+id/to_destination_with_uri_and_nav_options"
+        android:text="to_destination_with_uri_and_nav_options"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <TextView
+        android:id="@+id/to_destination_with_uri_and_nav_options_and_extras"
+        android:text="to_destination_with_uri_and_nav_options_and_extras"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <TextView
+        android:id="@+id/to_destination_with_directions"
+        android:text="to_destination_with_directions"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <TextView
+        android:id="@+id/to_destination_with_directions_and_extras"
+        android:text="to_destination_with_directions_and_extras"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <TextView
+        android:id="@+id/to_destination_with_directions_and_nav_options"
+        android:text="to_destination_with_directions_and_nav_options"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+</LinearLayout>
