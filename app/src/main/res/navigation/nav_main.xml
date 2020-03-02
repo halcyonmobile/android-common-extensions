@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.halcyonmobile.android.common.extensions.application.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_navigationFragment"
+            app:destination="@id/navigationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigationFragment"
+        android:name="com.halcyonmobile.android.common.extensions.application.ui.main.NavigationFragment"
+        android:label="NavigationFragment" >
+        <action
+            android:id="@+id/action_navigationFragment_to_simpleTextDetailFragment"
+            app:destination="@id/simpleTextDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/simpleTextDetailFragment"
+        android:name="com.halcyonmobile.android.common.extensions.application.ui.navigation.SimpleTextDetailFragment"
+        android:label="SimpleTextDetailFragment" >
+        <argument
+            android:name="text"
+            app:argType="string" />
+    </fragment>
+</navigation>

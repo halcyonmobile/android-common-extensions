@@ -1,0 +1,2 @@
+include ':app', ':navigation'
+rootProject.name='CommonExtensionsApplication'
