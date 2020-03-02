@@ -17,7 +17,7 @@ import androidx.navigation.Navigator
  * Note: the CurrentDestinationHoldingStore stored data stays even if new [CurrentDestinationCheckingNavController] is created for the same fragment.
  */
 class CurrentDestinationCheckingNavController internal constructor(
-    val underlyingNavController: NavController,
+    private val underlyingNavController: NavController,
     private val currentDestinationHoldingStore: CurrentDestinationHoldingStore
 ) {
 
