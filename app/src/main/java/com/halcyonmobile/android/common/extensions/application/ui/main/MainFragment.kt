@@ -25,6 +25,9 @@ class MainFragment : Fragment() {
         binding.navigationTestCta.setOnClickListener {
             findNavController().navigate(MainFragmentDirections.actionMainFragmentToNavigationFragment())
         }
+        binding.keyboardTestCta.setOnClickListener {
+            findNavController().navigate(MainFragmentDirections.actionMainFragmentToKeyboardExtensionFragment())
+        }
     }
 
 }

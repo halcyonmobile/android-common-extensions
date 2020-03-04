@@ -6,16 +6,25 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:gravity="center"
+        android:orientation="vertical"
         tools:context=".ui.main.MainFragment">
 
         <Button
             android:id="@+id/navigation_test_cta"
+            style="?attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-            android:text="@string/navigation_test" />
+            android:text="@string/navigation_test"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button" />
+
+        <Button
+            android:id="@+id/keyboard_test_cta"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/keyboard_test"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button" />
 
     </LinearLayout>
 </layout>

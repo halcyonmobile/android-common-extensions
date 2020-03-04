@@ -3,4 +3,7 @@
     <string name="navigation_test">Navigation Test</string>
     <string name="navigation_test_description">Click On Two Views at the same time and notice no crash</string>
     <string name="navigation_test_title">Safe Navigation Test</string>
+    <string name="keyboard_extension_test_description">The keyboard should be shown when the fragment is displayed, while should be closed when the user navigates away to home, another application, up, or to somewhere else</string>
+    <string name="keyboard_test">Keyboard Extension Test</string>
+    <string name="navigate_to_main">Navigate to Main</string>
 </resources>

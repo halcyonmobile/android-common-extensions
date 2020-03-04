@@ -2,6 +2,30 @@
 
 This repository is an aggregation of common Android extensions we are using at Halcyon Mobile.
 
+### I need all of the sub modules, is there a way to include the all?
+
+If you want to include all the sub-modules of this project use
+```gradle
+implementation "com.halcyonmobile.android.common.extensions:android.all:<latest-version>"
+```
+
+### View related extensions
+
+Aggregation of common View extensions we use in our applications.
+
+#### How do I setup?
+
+```gradle
+implementation "com.halcyonmobile.android.common.extensions:view:<latest-version>"
+```
+
+#### How do I use it?
+
+For now only contains reliable keyboard showing extension.
+
+```kotlin
+View.focusAndShowKeyboard()
+```
 
 ### Safe Navigation
 

@@ -9,15 +9,18 @@
         android:id="@+id/mainFragment"
         android:name="com.halcyonmobile.android.common.extensions.application.ui.main.MainFragment"
         android:label="main_fragment"
-        tools:layout="@layout/main_fragment" >
+        tools:layout="@layout/main_fragment">
         <action
             android:id="@+id/action_mainFragment_to_navigationFragment"
             app:destination="@id/navigationFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_keyboardExtensionFragment"
+            app:destination="@id/keyboardExtensionFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigationFragment"
         android:name="com.halcyonmobile.android.common.extensions.application.ui.main.NavigationFragment"
-        android:label="NavigationFragment" >
+        android:label="NavigationFragment">
         <action
             android:id="@+id/action_navigationFragment_to_simpleTextDetailFragment"
             app:destination="@id/simpleTextDetailFragment" />
@@ -25,9 +28,18 @@
     <fragment
         android:id="@+id/simpleTextDetailFragment"
         android:name="com.halcyonmobile.android.common.extensions.application.ui.navigation.SimpleTextDetailFragment"
-        android:label="SimpleTextDetailFragment" >
+        android:label="SimpleTextDetailFragment">
         <argument
             android:name="text"
             app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/keyboardExtensionFragment"
+        android:name="com.halcyonmobile.android.common.extensions.application.ui.keyboard.KeyboardExtensionFragment"
+        android:label="KeyboardExtensionFragment">
+        <action
+            android:id="@+id/action_keyboardExtensionFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 </navigation>
