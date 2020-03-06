@@ -47,6 +47,14 @@ Fragment.findSafeNavController().navigate(FooDirections.actionFooToBar())
 
 ```
 
+#### Lint warning
+
+For this safe navigation a lint warning is also included so it will make sure to use safeNavController for navigate calls.
+To include the lint warning add this to you app-module build.gradle
+```gradle
+lintChecks "com.halcyonmobile.android.common.extensions:safe.navigation.lint:<latest-version>"
+```
+
 #### Notes
 For any other action simply used the default NavController via Fragment.findNavController()
 

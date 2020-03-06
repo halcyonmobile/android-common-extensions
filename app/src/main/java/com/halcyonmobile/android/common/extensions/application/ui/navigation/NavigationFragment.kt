@@ -1,4 +1,4 @@
-package com.halcyonmobile.android.common.extensions.application.ui.main
+package com.halcyonmobile.android.common.extensions.application.ui.navigation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.halcyonmobile.android.common.extensions.application.R
 import com.halcyonmobile.android.common.extensions.application.databinding.NavigationFragmentBinding
-import com.halcyonmobile.android.common.extensions.application.ui.navigation.SimpleTextAdapter
 import com.halcyonmobile.android.common.extensions.application.ui.shared.ItemClickListener
 import com.halcyonmobile.android.common.extensions.navigation.findSafeNavController
 

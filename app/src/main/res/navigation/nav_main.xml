@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigationFragment"
-        android:name="com.halcyonmobile.android.common.extensions.application.ui.main.NavigationFragment"
+        android:name="com.halcyonmobile.android.common.extensions.application.ui.navigation.NavigationFragment"
         android:label="NavigationFragment">
         <action
             android:id="@+id/action_navigationFragment_to_simpleTextDetailFragment"
