@@ -28,7 +28,7 @@ class UnsafeNavigateCallHandler(private val javaContext: JavaContext) : UElement
     companion object {
 
         private val SurroundInIfLintFix = LintFix.create()
-            .name("Surround in If check")
+            .name("Surround with If check")
             .replace()
             .pattern("([^.]*.navigate.*)")
             .with("if (findNavController().currentDestination?.id == _) {\n\\k<0>\n}")

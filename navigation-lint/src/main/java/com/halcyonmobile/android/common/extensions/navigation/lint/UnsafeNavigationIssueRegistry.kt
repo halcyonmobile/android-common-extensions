@@ -30,7 +30,7 @@ class UnsafeNavigationIssueRegistry : IssueRegistry() {
         val UnsafeNavigateCallIssue = Issue.create(
             id = "UnsafeNavigationLintWarningIssue",
             briefDescription = "Unsafe navigate call on NavController",
-            explanation = "NavController.navigate may crashes with Destination Unknown for this NavController when two navigate actions are called after each other. Example double tap.\n Consider using findSafeNavController.",
+            explanation = "NavController.navigate may crash with Destination Unknown for this NavController when two navigate actions are called after each other. Example double tap.\n Consider using findSafeNavController.",
             category = Category.CORRECTNESS,
             priority = 5,
             severity = Severity.WARNING,
