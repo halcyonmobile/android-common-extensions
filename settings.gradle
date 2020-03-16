@@ -1,2 +1,6 @@
 include ':app', ':navigation'
 rootProject.name='CommonExtensionsApplication'
+include ':view'
+include ':android-all'
+include ':navigation-lint'
+include ':lints'
