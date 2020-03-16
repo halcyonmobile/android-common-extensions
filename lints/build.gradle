@@ -1,0 +1,35 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    compileOnly project(":navigation-lint")
+    def lintVersion = "26.6.1"
+    compileOnly "com.android.tools.lint:lint-api:$lintVersion"
+}
+
+sourceSets {
+    main {
+        java {
+            // this is a bit hacky, but lints can't contain dependencies, so in order to include more than one lint
+            // i added their sources here for now so the same code can be published in both modules
+
+            // if someone has a better idea, to create a fat-jar containing the files from navigation-lint as well
+            // please help me out
+            srcDirs 'src'
+            srcDirs '../navigation-lint/src/main'
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes('Lint-Registry-v2': 'com.halcyonmobile.android.common.lints.HalcyonLintIssueRegistry')
+    }
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
+
+project.ext.set("libraryArtifactId", "android.lint")
+apply plugin: "com.halcyonmobile.plugin.publish.artifactory.jar-library"
