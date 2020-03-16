@@ -1,12 +1,13 @@
 ## Halcyon Mobile Common Android Extensions
 
-This repository is an aggregation of common Android extensions we are using at Halcyon Mobile.
+This repository is an aggregation of common Android extensions and related lint warnings we are using at Halcyon Mobile.
 
 ### I need all of the sub modules, is there a way to include the all?
 
 If you want to include all the sub-modules of this project use
 ```gradle
 implementation "com.halcyonmobile.android.common.extensions:android.all:<latest-version>"
+lintChecks "com.halcyonmobile.android.common.extensions:android.lint:<latest-version>"
 ```
 
 ### View related extensions

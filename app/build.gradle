@@ -44,7 +44,7 @@ dependencies {
     implementation project(":navigation")
     implementation project(":view")
 
-    lintChecks project(":navigation-lint")
+    lintChecks project(":lints")
 
     testImplementation 'junit:junit:4.13'
 
