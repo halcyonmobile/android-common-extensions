@@ -3,5 +3,5 @@
 // # END bintray: make sure you add the published library to jcenter on the site
 
 ext.libraryGroupId = 'android.common.extensions'
-ext.libraryVersion = '0.1.0.3'
+ext.libraryVersion = '0.1.1'
 ext.bintray_source_url = "https://github.com/halcyonmobile/android-common-extensions"
