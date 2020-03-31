@@ -47,6 +47,10 @@ dependencies {
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     api "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion"
 
+    // Publishes the lint checks from the referenced module into this library.
+    // Consumers of 'safe.navigation' will have these bundled lint checks applied.
+    lintPublish project(":navigation-lint")
+
     testImplementation "junit:junit:4.13"
 
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
