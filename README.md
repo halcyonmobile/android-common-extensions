@@ -4,19 +4,18 @@ This repository is an aggregation of common Android extensions and related lint 
 
 *Latest version:*![Latest release](https://img.shields.io/github/v/release/halcyonmobile/android-common-extensions)
 
-### I need all of the sub modules, is there a way to include the all?
+### I need all of the sub modules, is there a way to include them all?
 
 If you want to include all the sub-modules of this project use
 ```gradle
 implementation "com.halcyonmobile.android.common.extensions:android.all:<latest-version>"
-lintChecks "com.halcyonmobile.android.common.extensions:android.lint:<latest-version>"
 ```
 
 ### View related extensions
 
 Aggregation of common View extensions we use in our applications.
 
-#### How do I setup?
+#### How do I set it up?
 
 ```gradle
 implementation "com.halcyonmobile.android.common.extensions:view:<latest-version>"
@@ -31,12 +30,15 @@ View.focusAndShowKeyboard()
 ```
 
 ### Safe Navigation
+ 
+When a user clicks on two or more CTAs, at the same time, that invoke `navigate` the application will crash because the first NavigationEvent 
+changes the currentDestination and as a consequence the second NavigationEvent won't be understood by the default NavController. It ultimately 
+will result in a crash. Safe navigation guards against this by wrapping the default NavController and checking whether the currentDestinationId 
+is valid before calling into NavController's `navigate`, it swallows the subsequent event otherwise.
 
-Safe navigation is a wrapper around the default NavController which checks the currentDestinationId.
-The reasoning is when a user clicks on two or more CTAs which result in navigation that can crash the application.
-That's because the second NavigationEvent won't be understood by the NavController since the first NavigationEvent changed it's currentDestination.
+In addition a lint warning is also included which will suggest to use `findSafeNavController` for navigate calls, hence avoiding the aforementioned crashes.
 
-#### How do I setup?
+#### How do I set it up?
 
 ```gradle
 implementation "com.halcyonmobile.android.common.extensions:safe.navigation:<latest-version>"
@@ -45,22 +47,11 @@ implementation "com.halcyonmobile.android.common.extensions:safe.navigation:<lat
 #### How do I use it?
 
 ```kotlin
-
-Fragment.findSafeNavController().navigate(FooDirections.actionFooToBar())
-
-```
-
-#### Lint warning
-
-For this safe navigation a lint warning is also included so it will make sure to use safeNavController for navigate calls.
-To include the lint warning add this to your app-module build.gradle
-```gradle
-lintChecks "com.halcyonmobile.android.common.extensions:safe.navigation.lint:<latest-version>"
+Fragment.findSafeNavController().navigate(FooDirections.actionFooToBar())  
 ```
 
 #### Notes
-For any other action simply used the default NavController via Fragment.findNavController()
-
+For any other action simply use the default NavController via `Fragment.findNavController()`
 
 
 <h1 id="license">License :page_facing_up:</h1>
