@@ -2,6 +2,8 @@
 
 This repository is an aggregation of common Android extensions and related lint warnings we are using at Halcyon Mobile.
 
+*Latest version:*![Latest release](https://img.shields.io/github/v/release/halcyonmobile/android-common-extensions)
+
 ### I need all of the sub modules, is there a way to include the all?
 
 If you want to include all the sub-modules of this project use
