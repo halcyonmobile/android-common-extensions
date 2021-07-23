@@ -4,6 +4,27 @@ This repository is an aggregation of common Android extensions and related lint 
 
 *Latest version:*![Latest release](https://img.shields.io/github/v/release/halcyonmobile/android-common-extensions)
 
+## Ensure you have the HalcyonMobile GitHub Packages as a repository
+
+```gradle
+// top level build.gradle
+{
+allprojects {
+    repositories {
+        // ...
+        maven {
+            url "https://maven.pkg.github.com/halcyonmobile/android-common-extensions"
+            credentials {
+                username = System.getenv("GITHUB_USERNAME")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+```
+
+Note: you only need one maven declaration with "halcyonmobile/{specific}", every other package will be accessable.
+
 ### I need all of the sub modules, is there a way to include them all?
 
 If you want to include all the sub-modules of this project use
