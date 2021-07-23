@@ -8,7 +8,7 @@ This repository is an aggregation of common Android extensions and related lint 
 
 ```gradle
 // top level build.gradle
-{
+//..
 allprojects {
     repositories {
         // ...
