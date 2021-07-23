@@ -32,4 +32,4 @@ sourceCompatibility = "8"
 targetCompatibility = "8"
 
 project.ext.set("libraryArtifactId", "android.lint")
-apply plugin: "com.halcyonmobile.plugin.publish.artifactory.jar-library"
+apply plugin: "com.halcyonmobile.plugin.publish.custom.jar-library"

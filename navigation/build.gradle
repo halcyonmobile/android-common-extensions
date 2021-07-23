@@ -67,4 +67,4 @@ dependencies {
 }
 
 project.ext.set("libraryArtifactId", "safe.navigation")
-apply plugin: "com.halcyonmobile.plugin.publish.artifactory.aar-library"
+apply plugin: "com.halcyonmobile.plugin.publish.custom.aar-library"
