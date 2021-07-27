@@ -51,7 +51,7 @@ dependencies {
     // Consumers of 'safe.navigation' will have these bundled lint checks applied.
     lintPublish project(":navigation-lint")
 
-    testImplementation "junit:junit:4.13"
+    testImplementation "junit:junit:4.13.2"
 
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
     testImplementation "org.mockito:mockito-inline:2.21.0"
