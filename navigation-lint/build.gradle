@@ -10,6 +10,14 @@ dependencies {
     testImplementation "com.google.truth:truth:1.1.3"
 }
 
+test {
+    testLogging {
+        events 'started', 'passed', 'skipped', 'failed'
+        exceptionFormat "full"
+        showStandardStreams true
+    }
+}
+
 jar {
     manifest {
         attributes('Lint-Registry-v2': 'com.halcyonmobile.android.common.extensions.navigation.lint.UnsafeNavigationIssueRegistry')

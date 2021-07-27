@@ -15,6 +15,15 @@
     </fragment>
 
     <fragment
+        android:id="@+id/unsafeNavigationOriginFragment"
+        android:name="com.halcyonmobile.android.common.extensions.navigation.fragments.UnsafeNavigationOriginFragment"
+        android:label="UnsafeNavigationOriginFragment">
+        <action
+            android:id="@+id/unsafe_origin_to_destination"
+            app:destination="@id/navigationDestinationFragment" />
+    </fragment>
+
+    <fragment
         android:id="@+id/navigationDestinationFragment"
         android:name="com.halcyonmobile.android.common.extensions.navigation.fragments.NavigationDestinationFragment"
         android:label="NavigationDestinationFragment">
