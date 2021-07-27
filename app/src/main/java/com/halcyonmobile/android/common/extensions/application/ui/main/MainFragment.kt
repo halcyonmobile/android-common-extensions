@@ -23,8 +23,9 @@ class MainFragment : Fragment() {
         val binding = DataBindingUtil.bind<MainFragmentBinding>(view) ?: return
 
         binding.navigationTestCta.setOnClickListener {
-            if (findNavController().currentDestination?.id == 15)
+            if (findNavController().currentDestination?.id == R.id.mainFragment) {
                 findNavController().navigate(MainFragmentDirections.actionMainFragmentToNavigationFragment())
+            }
         }
         binding.keyboardTestCta.setOnClickListener {
             findNavController().navigate(MainFragmentDirections.actionMainFragmentToKeyboardExtensionFragment())
