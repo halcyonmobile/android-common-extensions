@@ -2,5 +2,5 @@
 // # START ./gradlew howToPublish
 
 ext.libraryGroupId = 'android.common.extensions'
-ext.libraryVersion = '1.0.0'
+ext.libraryVersion = '1.0.1'
 ext.githubPackagePath = 'halcyonmobile/android-common-extensions'
