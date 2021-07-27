@@ -1,11 +1,10 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "29.0.2"
+
     defaultConfig {
         applicationId "com.halcyonmobile.android.common.extensions.application"
         minSdkVersion 21
@@ -20,9 +19,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    dataBinding {
-        enabled = true
-    }
+    buildFeatures.dataBinding = true
     compileOptions {
         sourceCompatibility 1.8
         targetCompatibility 1.8

@@ -1,0 +1,38 @@
+name: Verify Pull request is correct
+
+on:
+  pull_request:
+    branches:
+      - master
+
+env:
+  GITHUB_USERNAME: "halcyonmobile"
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+      - name: Run Android Unit Tests
+        run: ./gradlew testReleaseUnitTest
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Android Unit Test Results
+          path: navigation/build/reports/tests/testReleaseUnitTest/index.html
+          retention-days: 2
+      - name: Run Java Unit Tests
+        run: ./gradlew navigation-lint:test
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Java Unit Test Results
+          path: navigation-lint/build/reports/tests/test/index.html
+          retention-days: 2
