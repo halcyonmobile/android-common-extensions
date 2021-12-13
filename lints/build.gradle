@@ -4,7 +4,7 @@ apply plugin: 'kotlin'
 dependencies {
     compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     compileOnly project(":navigation-lint")
-    def lintVersion = "27.2.2"
+    def lintVersion = "30.0.4"
     compileOnly "com.android.tools.lint:lint-api:$lintVersion"
 }
 
