@@ -7,21 +7,21 @@ import androidx.navigation.NavDestination
 import androidx.navigation.NavDirections
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigator
-import com.nhaarman.mockitokotlin2.KArgumentCaptor
-import com.nhaarman.mockitokotlin2.anyOrNull
-import com.nhaarman.mockitokotlin2.argumentCaptor
-import com.nhaarman.mockitokotlin2.doReturn
-import com.nhaarman.mockitokotlin2.mock
-import com.nhaarman.mockitokotlin2.times
-import com.nhaarman.mockitokotlin2.verify
-import com.nhaarman.mockitokotlin2.verifyNoMoreInteractions
-import com.nhaarman.mockitokotlin2.verifyZeroInteractions
-import com.nhaarman.mockitokotlin2.whenever
+import org.mockito.kotlin.doReturn
+import org.mockito.kotlin.mock
+import org.mockito.kotlin.times
+import org.mockito.kotlin.verify
+import org.mockito.kotlin.verifyNoInteractions
+import org.mockito.kotlin.verifyNoMoreInteractions
+import org.mockito.kotlin.whenever
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
+import org.mockito.kotlin.KArgumentCaptor
+import org.mockito.kotlin.anyOrNull
+import org.mockito.kotlin.argumentCaptor
 
 @RunWith(Parameterized::class)
 class CurrentDestinationCheckingNavControllerTest(testName: String, val navigateParameter: NavigateParameters) {
@@ -39,8 +39,8 @@ class CurrentDestinationCheckingNavControllerTest(testName: String, val navigate
 
     @Test
     fun when_Created_then_noInteraction() {
-        verifyZeroInteractions(mockCurrentDestinationHoldingStore)
-        verifyZeroInteractions(mockNavController)
+        verifyNoInteractions(mockCurrentDestinationHoldingStore)
+        verifyNoInteractions(mockNavController)
     }
 
     @Test

@@ -1,8 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.5.21'
-    ext.navigationVersion = "2.3.5"
+    ext.kotlin_version = '1.6.10'
+    ext.navigationVersion = "2.4.1"
     repositories {
         google()
         mavenCentral()
@@ -16,10 +16,10 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath 'com.android.tools.build:gradle:7.1.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
-        classpath 'com.halcyonmobile.publish.custom:java-and-aar:2.1.0'
+        classpath 'com.halcyonmobile.publish.custom:java-and-aar:2.2.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }

@@ -1,16 +1,16 @@
 package com.halcyonmobile.android.common.extensions.navigation
 
 import androidx.lifecycle.SavedStateHandle
-import com.nhaarman.mockitokotlin2.doReturn
-import com.nhaarman.mockitokotlin2.mock
-import com.nhaarman.mockitokotlin2.times
-import com.nhaarman.mockitokotlin2.verify
-import com.nhaarman.mockitokotlin2.verifyNoMoreInteractions
-import com.nhaarman.mockitokotlin2.verifyZeroInteractions
-import com.nhaarman.mockitokotlin2.whenever
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
+import org.mockito.kotlin.doReturn
+import org.mockito.kotlin.mock
+import org.mockito.kotlin.times
+import org.mockito.kotlin.verify
+import org.mockito.kotlin.verifyNoInteractions
+import org.mockito.kotlin.verifyNoMoreInteractions
+import org.mockito.kotlin.whenever
 
 class CurrentDesinationHoldingStoreTest {
 
@@ -25,7 +25,7 @@ class CurrentDesinationHoldingStoreTest {
 
     @Test
     fun onCreationNoInteractionHappens(){
-        verifyZeroInteractions(mockSavedStateHandle)
+        verifyNoInteractions(mockSavedStateHandle)
     }
 
     @Test
