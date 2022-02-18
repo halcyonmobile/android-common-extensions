@@ -2,11 +2,11 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
@@ -45,10 +45,10 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     api "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
-    api 'androidx.appcompat:appcompat:1.3.1'
+    api 'androidx.appcompat:appcompat:1.4.1'
     api "androidx.navigation:navigation-ui-ktx:$navigationVersion"
     api "androidx.lifecycle:lifecycle-extensions:2.2.0"
-    def lifecycleVersion = "2.3.1"
+    def lifecycleVersion = "2.4.1"
     api "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     api "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion"
@@ -60,12 +60,12 @@ dependencies {
     testImplementation "junit:junit:4.13.2"
 
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
-    testImplementation "org.mockito:mockito-inline:3.11.2"
+    testImplementation "org.mockito:mockito-inline:4.3.1"
 
     testImplementation "androidx.test.ext:junit:1.1.3"
-    testImplementation "org.robolectric:robolectric:4.6.1"
-    testImplementation "androidx.navigation:navigation-testing:2.3.5"
-    testImplementation "androidx.fragment:fragment-testing:1.3.6"
+    testImplementation "org.robolectric:robolectric:4.7.3"
+    testImplementation "androidx.navigation:navigation-testing:2.4.1"
+    testImplementation "androidx.fragment:fragment-testing:1.4.1"
     testImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     androidTestImplementation "androidx.test.ext:junit:1.1.3"
