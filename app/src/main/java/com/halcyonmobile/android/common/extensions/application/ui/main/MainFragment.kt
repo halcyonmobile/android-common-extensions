@@ -10,13 +10,9 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.halcyonmobile.android.common.extensions.application.R
 import com.halcyonmobile.android.common.extensions.application.databinding.MainFragmentBinding
+import com.halcyonmobile.android.common.extensions.navigation.findSafeNavController
 
-class MainFragment : Fragment() {
-
-    private val viewModel: MainViewModel by viewModels()
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
-        inflater.inflate(R.layout.main_fragment, container, false)
+class MainFragment : Fragment(R.layout.main_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -29,6 +25,10 @@ class MainFragment : Fragment() {
         }
         binding.keyboardTestCta.setOnClickListener {
             findNavController().navigate(MainFragmentDirections.actionMainFragmentToKeyboardExtensionFragment())
+        }
+
+        binding.networkTestCta.setOnClickListener {
+            findSafeNavController().navigate(MainFragmentDirections.actionMainFragmentToNetworkTestFragment())
         }
     }
 
