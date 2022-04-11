@@ -28,6 +28,7 @@ dependencies {
 
     api project(":navigation")
     api project(":view")
+    api project(":network")
 }
 
 project.ext.set("libraryArtifactId", "android.all")
