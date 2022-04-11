@@ -11,14 +11,23 @@ import androidx.annotation.RequiresApi
  *
  * @return true if Device has Active Internet Available Network, false otherwise.
  */
-val Context.isNetworkActiveCompat: Boolean
+val Context.isNetworkActive: Boolean
     get() {
         val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            connectivityManager.isNetworkActive
-        } else {
-            connectivityManager.isNetworkActiveDeprecated
-        }
+
+        return connectivityManager.isNetworkActiveCompat
+    }
+
+/**
+ * Checks if the device's active Network has internet capability.
+ *
+ * @return true if Device has Active Internet Available Network, false otherwise.
+ */
+val ConnectivityManager.isNetworkActiveCompat: Boolean
+    get() = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        isNetworkActive
+    } else {
+        isNetworkActiveDeprecated
     }
 
 @get:RequiresApi(Build.VERSION_CODES.M)
