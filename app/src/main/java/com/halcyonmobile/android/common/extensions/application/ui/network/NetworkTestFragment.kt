@@ -6,14 +6,14 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.liveData
 import com.halcyonmobile.android.common.extensions.application.R
-import com.halcyonmobile.android.common.extensions.network.isNetworkActive
+import com.halcyonmobile.android.common.extensions.network.isNetworkActiveCompat
 import kotlinx.coroutines.awaitCancellation
 
 class NetworkTestFragment : Fragment(R.layout.fragment_network_test) {
 
     // checks whenever the fragment becomes at least onStart
     private val isNetworkActive = liveData(timeoutInMs = 1L) {
-        emit(requireContext().isNetworkActive)
+        emit(requireContext().isNetworkActiveCompat)
         awaitCancellation()
     }
 
