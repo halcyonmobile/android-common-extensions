@@ -9,7 +9,7 @@ import androidx.annotation.RequiresApi
 /**
  * Checks if the device's active Network has internet capability.
  *
- * @return true if Device has Active Internet Available Network, false otherwise.
+ * @return true if device has Available Network and Active Internet, false otherwise.
  */
 val Context.isNetworkActive: Boolean
     get() {
@@ -21,7 +21,7 @@ val Context.isNetworkActive: Boolean
 /**
  * Checks if the device's active Network has internet capability.
  *
- * @return true if Device has Active Internet Available Network, false otherwise.
+ * @return true if device has Available Network and Active Internet, false otherwise.
  */
 val ConnectivityManager.isNetworkActiveCompat: Boolean
     get() = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
