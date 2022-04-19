@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_mainFragment_to_keyboardExtensionFragment"
             app:destination="@id/keyboardExtensionFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_networkTestFragment"
+            app:destination="@id/networkTestFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigationFragment"
@@ -42,4 +45,8 @@
             android:id="@+id/action_keyboardExtensionFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/networkTestFragment"
+        android:name="com.halcyonmobile.android.common.extensions.application.ui.network.NetworkTestFragment"
+        android:label="NetworkTestFragment" />
 </navigation>

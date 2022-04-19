@@ -26,5 +26,12 @@
             android:text="@string/keyboard_test"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Button" />
 
+        <Button
+            android:id="@+id/network_test_cta"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/network_test"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button" />
     </LinearLayout>
 </layout>
