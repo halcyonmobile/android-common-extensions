@@ -3,7 +3,7 @@ apply plugin: 'kotlin'
 
 dependencies {
     compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    def lintVersion = "30.1.2"
+    def lintVersion = "30.3.1"
     compileOnly "com.android.tools.lint:lint-api:$lintVersion"
     testImplementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     testImplementation "com.android.tools.lint:lint:$lintVersion"
